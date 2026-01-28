@@ -108,6 +108,17 @@ There are aspects that could be improved or extended, such as more advanced prim
 
 ---
 
+### 👥 Team Contributions
+
+This project was developed as a team, with responsibilities distributed as follows:
+
+- **Database:** Ignacio  
+- **Backend & API development:** Sebastian  
+- **Frontend logic, validations, and API integration:** Sebastian  
+- **Frontend views and UI layout:** Anyelo
+
+---
+
 ---
 
 # Aplicación Web de Gestión para Restaurantes
@@ -217,3 +228,14 @@ Este proyecto fue desarrollado en equipo junto a **Ignacio, Anyelo y yo**, y cor
 Debido al nivel de experiencia y conocimientos con el que contábamos en ese momento, el proyecto presentó una curva de aprendizaje importante, especialmente en el diseño de la arquitectura, la comunicación entre capas y la validación de datos. Aun así, se logró construir una **aplicación funcional, estructurada y visualmente cuidada**, con funcionalidades básicas correctamente implementadas.
 
 Existen aspectos que pueden mejorarse o ampliarse, como una gestión más avanzada de llaves primarias y relaciones, mantener la sesión del usuario, así como la incorporación de nuevas funcionalidades. Estas oportunidades de mejora forman parte del aprendizaje obtenido y del crecimiento técnico posterior.
+
+---
+
+### 👥 Aportes del Equipo
+
+El proyecto fue desarrollado en equipo, con las siguientes responsabilidades:
+
+- **Base de datos:** Ignacio  
+- **Backend y desarrollo de la API:** Sebastian  
+- **Lógica del frontend, validaciones y conexión con la API:** Sebastian  
+- **Vistas y diseño visual del frontend:** Anyelo

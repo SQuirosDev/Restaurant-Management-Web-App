@@ -3,7 +3,7 @@
 >  
 > The repository will be updated as soon as these issues are resolved.
 > 
-> > ⚠️ **Aviso Importante**  
+> ⚠️ **Aviso Importante**  
 > El código fuente del backend y del frontend no se encuentra disponible actualmente en este repositorio debido a inconvenientes técnicos durante el proceso de subida.  
 >  
 > El repositorio será actualizado tan pronto como estos inconvenientes sean resueltos.

@@ -14,7 +14,7 @@ The system was developed using a **layered architecture**, where each component 
 ### 🔹 Database
 - **Engine:** SQL Server  
 - Usage of:
-  - Relational tables
+  - tables
   - Stored Procedures (SP) for:
     - Data insertion
     - Data retrieval and listing
@@ -25,7 +25,7 @@ The system was developed using a **layered architecture**, where each component 
 - Data access implemented with **LINQ**
 - **REST API** implementation:
   - Acts as an intermediary between the database and the frontend
-  - Handles business logic and validations using .NET Framework
+- Handles business logic and validations using .NET Framework
 - Data validations at the logic layer
 
 ### 🔹 Frontend
@@ -65,7 +65,7 @@ The system was developed using a **layered architecture**, where each component 
 - Create reservations
 - List reservations
 - Submit customer comments (feedback)
-- List comments
+- List comments (feedback)
 - Create invoices
 - List invoices
 - User registration
@@ -137,7 +137,7 @@ El sistema fue desarrollado utilizando una **arquitectura por capas**, donde cad
 - Acceso a datos mediante **LINQ**
 - Implementación de una **API REST**
   - Actúa como intermediario entre la base de datos y el frontend
-  - Manejo de la lógica de negocio y validaciones en .NET Framework
+- Manejo de la lógica de negocio y validaciones en .NET Framework
 - Validaciones de datos a nivel de lógica
 
 ### 🔹 Frontend
@@ -177,7 +177,7 @@ El sistema fue desarrollado utilizando una **arquitectura por capas**, donde cad
 - Ingreso de reservas
 - Listado de reservas
 - Ingreso de comentarios (feedback)
-- Listado de comentarios
+- Listado de comentarios (feedback)
 - Ingreso de facturas
 - Listado de facturas
 - Registro de usuarios

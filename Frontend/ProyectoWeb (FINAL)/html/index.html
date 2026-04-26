@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante: Sabor en el cielo</title>
+  <link rel="stylesheet" href="../css/Css_Index.css">
+  <link rel="icon" href="/icons/food-and-restaurant.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-dark">
+
+  <!-- Preloader: Animación SVG -->
+<!--   <div class="preloader">
+    <svg class="tea" width="37" height="48" viewbox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z"
+        stroke="white" stroke-width="2"></path>
+      <path
+        d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34"
+        stroke="white" stroke-width="2"></path>
+      <path id="teabag" fill="white" fill-rule="evenodd" clip-rule="evenodd"
+        d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z">
+      </path>
+      <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" stroke="white"></path>
+      <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="white" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div> -->
+  <!--First Part-->
+
+  <!--NavBar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="../html/index.html">Logo</a>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu de inicio</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" aria-current="page" href="../html/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" href="../html/menu.html">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" aria-current="page"href="../html/reservacion.html">Reservar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" aria-current="page" href="../html/feedback.html">Comentarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" aria-current="page" href="../html/facturacion.html">Facturacion</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link active mx-lg-2" aria-current="page"
+                            href="../html/Archivos_HTML_Secundarios/sobre_nosotros.html">Conócenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" aria-current="page"
+                            href="../html/Archivos_HTML_Secundarios/ayuda.html">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="../html/login.html" id="signInBtn" class="register-btn mx-lg-2">Sign In / Up</a>
+        <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+  <!--END NavBar-->
+  <!--HeroSection-->
+  <section class="hero-section">
+    <div class="container d-flex text-center justify-content-center fs-1 text-white flex-column">
+      <h1>Restaurante</h1>
+      <h2>El Sabor del Cielo</h2>
+    </div>
+  </section>
+  <!--END HeroSection-->
+
+  <!--Second Part-->
+  <!--Separador-->
+  <div class="separador"></div>
+  <!--END Separador-->
+  <!--Cards-->
+  <div class="title-welcom text-white text-center aling-items-center">
+    <h1>
+      Los mejores platillos
+    </h1>
+    <i class="ri-restaurant-fill"></i>
+    <h4>
+      Según las opiniones de los comensales
+    </h4>
+  </div>
+  <div class="card1">
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="../img/platillos-img/Platillo1.avif" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Platillo casero de mesa</h5>
+            <p class="card-text">Uno de nuestros platillos caseros y deliciosos, preparados con
+              verduras de alta calidad, arroz salteado con ajo y acompañado de un pollo a la plancha con salsa de
+              hongos.
+            </p>
+            <p class="card-text"><small class="text-muted">Platillo #1 de la casa</small></p>          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="../img/platillos-img/Platillo2.avif" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">El sabor del olor</h5>
+            <p class="card-text">Un platillo delicioso, especial por sus verduras salteadas como los hongos y demas
+              acompañado de un buen lomito de cerdo bañado en una salsa especial de tomate.
+            </p>
+            <p class="card-text"><small class="text-muted">Platillo #2 de la casa</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="../img/platillos-img/Platillo3.avif" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Dulce cama</h5>
+            <p class="card-text">Un platillo el cual va acompañado de una cama de pure de papa muy jugosa y Dulce
+              arriba de la cama de papa, unas piezas de cerdo acompañado con verduras.
+            </p>
+            <p class="card-text"><small class="text-muted">Platillo #3 de la casa</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END Cards-->
+  <div class="separador"></div>
+  <!--TercerParte-->
+  <div class="row mt-5 align-items-center">
+    <div class="chef-container col-md-6 order-md-2 text-center">
+      <img class="chef" src="../img/Chef.jpg" alt="Chef Dani García" class="img-fluid shadow rounded">
+    </div>
+
+    <div class="col-md-6 order-md-1">
+      <h1 class="text-white text-uppercase"><i class="ri-restaurant-fill"></i>En la Cocina<i
+          class="ri-restaurant-fill"></i></h1>
+      <br>
+      <h2 class="mb-3">El Chef Dani García</h2>
+      <h5 class="textoSecundario mb-4 text-white">
+        El Chef <strong>Dani García</strong> dirige un equipo apasionado por la cocina. Su enfoque combina
+        técnicas tradicionales con innovación, ofreciendo platos únicos y llenos de sabor.
+      </h5>
+      <a href="../html/Archivos_HTML_Secundarios/sobre_nosotros.html" class="btn btn-outline-primary">Conoce Más</a>
+
+    </div>
+  </div>
+  <!--END TerceraParte-->
+  <div class="separador"></div>
+  <!--CuartaParte-->
+  <div class="fondo2">
+    <img class="fondo-2" src="..." alt="">
+    <div class="texto2">
+      <h1 class="propuesta">Nuestra propuesta</h1>
+      <br>
+      <br>
+      <h5><strong>Nuestra propuesta se basa en...</strong></h5>
+      <br>
+      <h4>
+        <br>
+        La mesa escondida es un restaurante que combina tradición y modernidad, ofreciendo
+        una experiencia gastronómica única que conecta a los comensales con sus raíces
+        culturales mientras exploran sabores contemporáneos. La decoración está inspirada
+        en la naturaleza y la cultura local, utilizando madera rústica, plantas naturales y
+        detalles artísticos como cerámica y textiles que evocan tradiciones de la región. El
+        ambiente es acogedor y sofisticado, con música instrumental suave e iluminación
+        cálida que invita a disfrutar cada momento. El menú incluye versiones
+        reinventadas de platos tradicionales con
+        emplatado innovador, así como opciones internacionales con un
+        toque local, como pastas con ingredientes autóctonos o sushi tropical con mango fresco.
+        Para los postres, se presentan dulces clásicos reinterpretados, como un tres leches de
+        coco o helados artesanales de sabores tropicales. Además, se ofrecen bebidas elaboradas
+        con frutas frescas, infusiones naturales y cocteles de autor que completan la experiencia.
+        El restaurante trabaja con ingredientes frescos, priorizando el consumo local y sostenible,
+        creando una conexión directa entre los productores y los clientes. Sabores Raíces busca
+        convertirse en un lugar que no solo alimenta el cuerpo, sino también el alma,
+        rescatando el valor de las tradiciones y adaptándolas al presente.
+      </h4>
+    </div>
+  </div>
+  <!--END CuartaParte-->
+  <div class="separador"></div>
+  <!--QuintaParte-->
+  <div class="row mt-5 align-items-center">
+    <div class="col-md-6 order-md-2 text-center">
+      <img class="salaR" src="../img/salaR.jpg" alt="Sala reservacion" class="img-fluid shadow rounded">
+    </div>
+    <div class="col-md-6 order-md-1">
+      <h1 class="text-white text-uppercase">¿Deseas reservar?</h1>
+      <br>
+      <h3 class="textoSecundario mb-4 text-white">
+        ¡Tu elijes la fecha, la hora y la cantidad de chusma! <br>
+        solo debes de dar click la boton para llenar los datos de tu reservación <br>
+        y despues solo te queda disfrutar de nuestros sabrosos platillos <br>
+        ademas de nuestro ambiente <br>
+        <h2 class="textoSecundario mb-4 text-white">
+          ¡<strong>Te esperamos...</strong>!
+        </h2>
+      </h3>
+      <a href="../html/reservacion.html" class="btn btn-outline-primary">Reservar Ahora</a>
+    </div>
+  </div>
+  <!--END QuintaParte-->
+  <div class="separador"></div>
+  <!--SextaParte-->
+  <div class="fondo6">
+    <img class="fondoHorarios" src="..." alt="">
+    <div class="textoHorarios">
+      <h1 class="horarios">Horarios</h1>
+      <br>
+      <br>
+      <h4>
+        horarios: de martes a viernes<br>
+        de 11:00 am a 7:30 pm.
+      </h4>
+      <h1 class="horarios">
+        Horarios <br>
+        fin de semana</h1>
+      <br>
+      <br>
+      <h4>
+        horarios: sabado y domingo<br>
+        de 12:00 md a 8:00 pm
+      </h4>
+      <h1 class="horarios">Eventos especiales</h1>
+      <br>
+      <br>
+      <h4>
+        horarios<br>
+        Fines de semana
+        <br>
+        de 4:00 pm a 8:00 pm
+      </h4>
+    </div>
+  </div>
+  <!--END SextaParte-->
+  <div class="separador"></div>
+  <!--SeptimaParte-->
+  <div class="fondo7">
+    <img class="fondoM7" src="..." alt="">
+    <div class="contenedor-texto">
+      <h1 class="title">Ubicación Exacta</h1>
+      <p class="description">Nos encontramos en...</p>
+      <div id="map" class="map"></div>
+    </div>
+  </div>
+  <!--END SeptimaParte-->
+  <div class="separador"></div>
+  <!--UltimaParte-->
+  <div class="cards-container">
+    <div class="card2" style="width: 18rem;">
+      <img src="../img/Opinion1.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text1">Opinión #1</p>
+        <p class="card-text1">"Un restaurante increible <br> para pasarla bien"</p>
+      </div>
+    </div>
+    <div class="card2" style="width: 18rem;">
+      <img src="../img/Opinion2.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text1">Opinión #2</p>
+        <p class="card-text1">"Me gusta la musica y los platillo <br> pero sus bebidas son la bomba "</p>
+      </div>
+    </div>
+    <div class="card2" style="width: 18rem;">
+      <img src="../img/Opinion3.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text1">Opinion #3</p>
+        <p class="card-text1">"¡Su comida es fantastica <br> sus postres estan de lujo!"</p>
+      </div>
+    </div>
+    <div class="card2" style="width: 18rem;">
+      <img src="../img/opinion4.webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text1">Opinión #4</p>
+        <p class="card-text1">"Es un lugar con excelente servicio al cliente"</p>
+      </div>
+    </div>
+  </div>
+  <!-- END UltimaParte -->
+  <div class="separador"></div>
+  <!--Redes-->
+  <div class="social-section">
+    <h2>Nuestras Redes Sociales</h2>
+    <div class="social-icons">
+      <a href="https://www.instagram.com" target="_blank" class="social-icon">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com" target="_blank" class="social-icon">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://wa.me/1234567890" target="_blank" class="social-icon">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+  <!--END Redes-->
+  <!--Créditos -->
+  <div class="credits-container">
+    <p>&#169; 2024 El Sabor del Cielo | Derechos de Autor Reservados | Diseñado por Anyelo Valdivia, Sebastian Quiros, Ignacio Mejia</p>
+  </div>
+  <!--END Créditos-->
+  <!--Js Link-->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script type="text/javascript" src="../js/Script.js"></script>
+</body>
+
+</html>

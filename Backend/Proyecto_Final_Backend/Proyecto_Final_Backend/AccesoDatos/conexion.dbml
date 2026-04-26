@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PROYECTOWEBFINALV2" Class="conexionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CompuSebas\SQLEXPRESS;Initial Catalog=PROYECTOWEBFINALV2;Integrated Security=True;Encrypt=False" SettingsObjectName="Proyecto_Final_Backend.Properties.Settings" SettingsPropertyName="PROYECTOWEBFINALV2ConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.spObtenerFeedback" Method="spObtenerFeedback">
+    <ElementType Name="spObtenerFeedbackResult">
+      <Column Name="id_feedback" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="usuario" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="comentario" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="calificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spObtenerReservas" Method="spObtenerReservas">
+    <ElementType Name="spObtenerReservasResult">
+      <Column Name="id_reserva" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_reserva" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="numero_personas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="nombre_cliente" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spRegistrarUsuario" Method="spRegistrarUsuario">
+    <Parameter Name="nombre" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="correo" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="contrasena" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="rol" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spObtenerFactura" Method="spObtenerFactura">
+    <ElementType Name="spObtenerFacturaResult">
+      <Column Name="id_factura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_reserva" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="numeroMesa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="listaPlatos" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="listaPrecios" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_facturacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nombre_cliente" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha_reserva" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spIniciarSesion" Method="spIniciarSesion">
+    <ElementType Name="spIniciarSesionResult">
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="correo" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="contrasena" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spInsertarReserva" Method="spInsertarReserva">
+    <Parameter Name="fecha_reserva" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="numero_personas" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertarFactura" Method="spInsertarFactura">
+    <Parameter Name="numeroMesa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="listaPlatos" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="listaPrecios" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="total" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertarFeedback" Method="spInsertarFeedback">
+    <Parameter Name="comentario" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="calificacion" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

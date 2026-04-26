@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disfruta de nuestro sabroso menú</title>
+  <link rel="icon" href="/icons/food-and-restaurant.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/Css_Menu.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+  <!-- Preloader: Animación SVG -->
+  <div class="preloader">
+    <svg class="tea" width="37" height="48" viewbox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z"
+        stroke="white" stroke-width="2"></path>
+      <path
+        d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34"
+        stroke="white" stroke-width="2"></path>
+      <path id="teabag" fill="white" fill-rule="evenodd" clip-rule="evenodd"
+        d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z">
+      </path>
+      <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" stroke="white"></path>
+      <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="white" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+
+ <!--NavBar-->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+      <a class="navbar-brand" href="index.html">Logo</a>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu de inicio</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" aria-current="page" href="../html/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" href="../html/menu.html">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" aria-current="page"href="../html/reservacion.html">Reservar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" aria-current="page" href="../html/feedback.html">Comentarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" aria-current="page" href="../html/facturacion.html">Facturacion</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link active mx-lg-2" aria-current="page"
+                            href="../html/Archivos_HTML_Secundarios/sobre_nosotros.html">Conócenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-lg-2" aria-current="page"
+                            href="../html/Archivos_HTML_Secundarios/ayuda.html">Contactanos</a>
+                    </li>
+              </ul>
+          </div>
+      </div>
+      <a href="../html/login.html" id="signInBtn" class="register-btn mx-lg-2">Sign In / Up</a>
+      <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+  </div>
+</nav>
+
+  <section class="hero-section">
+    <div class="container d-flex text-center justify-content-center fs-1 text-white flex-column">
+      <h1>Menú</h1>
+    </div>
+  </section>
+
+  <!--Separador-->
+  <div class="separador"></div>
+  <!--Carousel Platillos fuertes-->
+
+  <div class="carousel-title-container">
+    <div class="carousel-title">
+      Platillos Fuertes
+    </div>
+  </div>
+
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../img/platillos-img/Platillo1.avif" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/platillos-img/Platillo2.avif" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/img/platillos-img/Platillo3.avif" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/platillos-img/Platillo4.avif" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/platillos-img/Platillo5.avif" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!--Separador-->
+  <div class="separador"></div>
+  <!--Carousel Postres-->
+
+  <div class="carousel-title-container">
+    <div class="carousel-title">
+      Postres
+    </div>
+  </div>
+
+  <div id="carouselExampleCaptions1" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../img/postres-img/Postre 1.PNG" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/postres-img/Postre 2.PNG" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/postres-img/Postre 3.PNG" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/postres-img/Postre 4.PNG" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/postres-img/Postre 5.PNG" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--Carousel Bebidas-->
+
+  <div class="carousel-title-container">
+    <div class="carousel-title">
+      Bebidas
+    </div>
+  </div>
+
+  <div id="carouselExampleCaptions2" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../img/bebidas/bebida 7.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/bebidas/bebida 2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/bebidas/bebida 3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/bebidas/bebida 6.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../img/bebidas/bebida 5.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--Separador-->
+  <div class="separador"></div>
+  <!--Menu Principal-->
+
+  <div class="background-container">
+    <div class="container-title">
+      <h1 class="menu-title">Disfruta de nuestros platillos sabrosos</h1>
+    </div>
+    <!--Separador-->
+    <div class="separador"></div>
+    <div class="container-menu-general">
+      <h2 id="drinksTitle" class="menu-title">Sección de Platillos fuertes</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card" id="platillo 1">
+          <img src="../img/platillos-img/Platillo1.avif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card'scontent.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal1')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/platillos-img/Platillo2.avif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal2')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/platillos-img/Platillo3.avif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal3')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/platillos-img/Platillo4.avif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal4')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/platillos-img/Platillo5.avif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal5')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/platillos-img/Platillo6.avif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal6')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/platillos-img/Platillo7.avif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal7')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/platillos-img/Platillo8.avif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal8')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/platillos-img/Platillo9.avif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal9')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/platillos-img/Platillo10.avif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal10')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/platillos-img/Platillo11.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal11')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/platillos-img/Platillo12.avif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal12')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Seccion de Bebidas-->
+
+    <div class="container-menu-general">
+      <h2 id="drinksTitle" class="menu-title">Sección de Bebidas</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 1.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal13')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal14')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal15')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 4.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal16')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal17')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal18')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 7.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal19')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 8.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal20')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 9.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal21')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 10.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal22')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 11.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal23')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/bebidas/bebida 12.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal24')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Seccion de postres-->
+
+    <div class="container-menu-general">
+      <h2 id="drinksTitle" class="menu-title">Sección de Postres</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/postres-img/Postre 1.PNG" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal25')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/postres-img/Postre 2.PNG" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal26')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/postres-img/Postre 3.PNG" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal27')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/postres-img/Postre 4.PNG" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal28')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/postres-img/Postre 5.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal29')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/postres-img/Postre 6.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal30')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/postres-img/Postre 7.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal31')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="../img/postres-img/Postre 8.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="javascript:void(0);" onclick="openModal('modal32')" class="btn btn-primary">Detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Seccion Modal Platillos Fuertes-->
+  <!--Modal 1-->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo1.avif" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal1')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 2-->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo2.avif" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal2')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 3-->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo3.avif" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal3')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 4-->
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo4.avif" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal4')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 5-->
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo5.avif" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal5')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 6-->
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo6.avif" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal6')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 7-->
+  <div id="modal7" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal7')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo7.avif" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal7')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 8-->
+  <div id="modal8" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal8')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo8.avif" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal8')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 9-->
+  <div id="modal9" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal9')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo9.avif" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal9')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 10-->
+  <div id="modal10" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal10')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo10.avif" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal10')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 11-->
+  <div id="modal11" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal11')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo11.jpg" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal11')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 12-->
+  <div id="modal12" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal12')">&times;</span>
+      <img id="modal-image" src="../img/platillos-img/Platillo12.avif" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal12')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Seccion Modal Bebidas-->
+  <!--Modal 13-->
+  <div id="modal13" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal13')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 1.jpeg" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal13')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 14-->
+  <div id="modal14" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal14')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 2.jpg" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal14')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 15-->
+  <div id="modal15" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal15')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 3.jpg" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal15')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 16-->
+  <div id="modal16" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal16')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 4.jpeg" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal16')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 17-->
+  <div id="modal17" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal17')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 5.jpg" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal17')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 18-->
+  <div id="modal18" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal18')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 6.jpg" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal18')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 19-->
+  <div id="modal19" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('moda19')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 7.webp" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal19')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 20-->
+  <div id="modal20" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal20')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 8.jpg" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal20')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 21-->
+  <div id="modal21" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal21')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 9.jpg" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal21')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 22-->
+  <div id="modal22" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal22')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 10.jpeg" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal22')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 23-->
+  <div id="modal23" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal23')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 11.webp" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal23')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 24-->
+  <div id="modal24" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal24')">&times;</span>
+      <img id="modal-image" src="../img/bebidas/bebida 12.webp" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal24')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Seccion Modal Postres-->
+  <!--Modal 25-->
+  <div id="modal25" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal25')">&times;</span>
+      <img id="modal-image" src="../img/postres-img/Postre 1.PNG" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal25')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 26-->
+  <div id="modal26" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal26')">&times;</span>
+      <img id="modal-image" src="../img/postres-img/Postre 2.PNG" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal26')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 27-->
+  <div id="modal27" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal27')">&times;</span>
+      <img id="modal-image" src="../img/postres-img/Postre 3.PNG" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal27')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 28-->
+  <div id="modal28" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal28')">&times;</span>
+      <img id="modal-image" src="../img/postres-img/Postre 4.PNG" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal28')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 29-->
+  <div id="modal29" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal29')">&times;</span>
+      <img id="modal-image" src="../img/postres-img/Postre 5.png" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal29')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 30-->
+  <div id="modal30" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal30')">&times;</span>
+      <img id="modal-image" src="../img/postres-img/Postre 6.png" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal30')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 31-->
+  <div id="modal31" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal31')">&times;</span>
+      <img id="modal-image" src="../img/postres-img/Postre 7.png" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal31')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+  <!--Modal 32-->
+  <div id="modal32" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('modal32')">&times;</span>
+      <img id="modal-image" src="../img/postres-img/Postre 8.png" alt="Platillo 1 Ampliado" class="modal-image">
+      <div class="modal-info">
+        <h3 id="modal-name">Platillo Delicioso</h3>
+        <p id="modal-ingredients">Ingredientes: Arroz, Pollo, Verduras</p>
+        <p id="modal-price">$15.00</p>
+        <button class="btn btn-danger" onclick="closeModal('modal32')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!--Créditos -->
+  <div class="credits-container">
+    <p>&#169; 2024 El Sabor del Cielo | Derechos de Autor Reservados | Diseñado por Anyelo Valdivia, Sebastian Quiros, Ignacio Mejia</p>
+  </div>
+  <!--END Créditos-->
+  <div id="overlay" class="overlay"></div>
+
+  <!--Scripts-->
+  <script src="../js/Js_Menu.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <!--END Scripts-->
+</body>
+
+</html>

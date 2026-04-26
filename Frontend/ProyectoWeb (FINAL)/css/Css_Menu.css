@@ -1,0 +1,636 @@
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #1e1e2f, #121214);
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /*to bottom right*/
+    /*NavBar*/
+    .navbar-brand {
+      font-weight: 500;
+      color: #585858;
+      font-size: 27px;
+      transition: 0.3s color;
+    }
+
+    #btnAdmin {
+      display: none;
+    }
+
+    .navbar {
+      background-color: #fff;
+      height: 70px;
+      margin: 20px;
+      border-radius: 16px;
+      padding: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .login-btn {
+      background-color: #333333;
+      color: #fff;
+      font-size: 14px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s background-color;
+    }
+
+    .login-btn:hover {
+      background-color: #585858;
+    }
+
+    .register-btn {
+      background-color: #333333;
+      color: #fff;
+      font-size: 14px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s background-color;
+    }
+
+    .register-btn:hover {
+      background-color: #585858;
+    }
+
+    .navbar-toggler {
+      border: none;
+      font-size: 1.25rem;
+    }
+
+    .navbar-toggler:focus,
+    .btn-close:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    .nav-link {
+      color: #000;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .navbar.hidden {
+      transform: translateY(-150%);
+    }
+
+    .nav-link:hover,
+    .nav-link:active {
+      color: #000;
+    }
+
+    @media(min-width: 944px) {
+      .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #D3D3D3;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+      }
+
+      .nav-link:hover::before {
+        width: 100%;
+        visibility: visible;
+      }
+    }
+
+    /*HeroSection*/
+    .hero-section {
+      background: url(../img/FondoMenu.jpg) no-repeat center;
+      background-size: cover;
+      width: 100%;
+    }
+
+    .hero-section::before {
+      background-color: rgba(0, 0, 0, 0.3);
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .hero-section .container {
+      height: 100vh;
+      z-index: 1;
+      position: relative;
+    }
+
+    .hero-section h1 {
+      font-size: 1.5em;
+    }
+
+    .hero-section h2 {
+      font-size: 1.2em;
+    }
+
+    /*Separador*/
+    .separador {
+      min-width: none;
+      height: 50px;
+      background: #333333;
+    }
+
+    /*Carousel*/
+    .carousel-title-container {
+      margin-top: 20px;
+      text-align: center;
+      /* Centra el título */
+      margin-bottom: 20px;
+      /* Espacio debajo del título */
+    }
+
+    /* Estilo del cuadro blanco transparente con bordes redondeados */
+    .carousel-title {
+      background-color: rgba(255, 255, 255, 0.2);
+      /* Fondo blanco con opacidad */
+      color: white;
+      /* Color del texto blanco */
+      display: inline-block;
+      /* Hace que el cuadro sea solo lo necesario */
+      padding: 10px 20px;
+      /* Espaciado dentro del cuadro */
+      font-size: 24px;
+      /* Tamaño de la fuente */
+      border-radius: 15px;
+      /* Bordes redondeados */
+      font-weight: bold;
+      /* Estilo negrita */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      /* Sombra suave */
+    }
+
+    /* Asegura que el carousel esté centrado y con espacio alrededor */
+    .carousel {
+      margin-top: 20px;
+
+      max-width: 80%;
+      /* Ajusta el tamaño máximo del carousel */
+      margin: 0 auto;
+      /* Centra el carousel en la página */
+      padding: 20px;
+      /* Añade algo de espacio alrededor */
+    }
+
+    /* Bordes y sombra para las imágenes del carousel */
+    .carousel-inner img {
+      border: 5px solid #12122a;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      /* Las imágenes estarán ocultas al principio */
+      transform: scale(0.9);
+      /* Inicialmente las imágenes estarán ligeramente más pequeñas */
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      /* Transición suave */
+    }
+
+    .carousel-item.active img {
+      opacity: 1;
+      transform: scale(1);
+      /* La imagen se mostrará a su tamaño completo */
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+
+    /* Asegura que el carousel sea responsive */
+    @media (max-width: 768px) {
+      .carousel {
+        max-width: 95%;
+        /* El carousel ocupará más espacio en pantallas pequeñas */
+      }
+    }
+
+    /* Estilo de animación para las transiciones entre imágenes */
+    .carousel-item {
+      flex: 0 0 100%;
+      transition: opacity 1s ease, transform 1s ease;
+      opacity: 0;
+    }
+
+    .carousel-item.active {
+      opacity: 1;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Fondo semitransparente para mejor legibilidad */
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    /* Estilo del carousel en móviles */
+    @media (max-width: 576px) {
+      .carousel-caption h5 {
+        font-size: 16px;
+        /* Reduce el tamaño del título en móviles */
+      }
+
+      .carousel-caption p {
+        font-size: 14px;
+        /* Reduce el tamaño del texto en móviles */
+      }
+    }
+
+    /*Animation Pre-Loader*/
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #12122a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+
+    .content {
+      text-align: center;
+    }
+
+    /* Animación del SVG */
+    svg.tea {
+      --secondary: white;
+    }
+
+    svg.tea #teabag {
+      transform-origin: top center;
+      transform: rotate(3deg);
+      animation: swing 2s infinite;
+    }
+
+    svg.tea #steamL {
+      stroke-dasharray: 13;
+      stroke-dashoffset: 13;
+      animation: steamLarge 2s infinite;
+    }
+
+    svg.tea #steamR {
+      stroke-dasharray: 9;
+      stroke-dashoffset: 9;
+      animation: steamSmall 2s infinite;
+    }
+
+    /* Keyframes para animaciones */
+    @keyframes swing {
+      50% {
+        transform: rotate(-3deg);
+      }
+    }
+
+    @keyframes steamLarge {
+      0% {
+        stroke-dashoffset: 13;
+        opacity: 0.6;
+      }
+
+      100% {
+        stroke-dashoffset: 39;
+        opacity: 0;
+      }
+    }
+
+    @keyframes steamSmall {
+      10% {
+        stroke-dashoffset: 9;
+        opacity: 0.6;
+      }
+
+      80% {
+        stroke-dashoffset: 27;
+        opacity: 0;
+      }
+    }
+
+    .background-container {
+      background: #3E2723;
+    }
+
+    /*Menu Principal*/
+    .container-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      /* Texto blanco */
+      text-align: center;
+      /* Centra el texto */
+      padding: 220px 0;
+      /* Espaciado arriba y abajo */
+      filter: blur(0.1px);
+    }
+
+    .container-title::before {
+      content: "";
+      /* Crea un pseudo-elemento vacío */
+      position: absolute;
+      /* Asegura que cubra todo el contenedor */
+      top: 0;
+      left: 0;
+      width: 100%;
+      /* Abarca todo el ancho */
+      height: 100%;
+      /* Abarca toda la altura */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/fondoMenuGeneral.jpg');
+      /* Degradado + imagen */
+      background-size: cover;
+      /* Asegura que la imagen cubra el área */
+      background-position: center;
+      /* Centra la imagen */
+      background-attachment: fixed;
+      /* Efecto parallax */
+      background-repeat: no-repeat;
+      /* Evita repeticiones */
+      filter: blur(15px);
+      /* Aplica el desenfoque solo al fondo */
+      z-index: -1;
+      /* Asegura que esté detrás del texto */
+    }
+
+    .container-title h1 {
+      font-size: 3rem;
+      /* Tamaño del texto */
+      margin: 0;
+      /* Sin márgenes extra */
+    }
+
+    .menu-title {
+      text-align: center;
+      color: white;
+      display: inline-block;
+      padding: 35px;
+      margin-top: 5px;
+      border-radius: 5px;
+      transform: translateY(20px);
+      /* Para que empiece fuera de la pantalla */
+      opacity: 0;
+      /* Comienza invisible */
+      transition: transform 0.8s ease, opacity 0.8s ease;
+    }
+
+    .menu-title h2 {
+      font-size: 2.5rem;
+      margin: 20px;
+      margin-top: 5px;
+    }
+
+    .container-menu-general {
+      background: rgba(255, 255, 255, 0.2);
+      /* Fondo blanco transparente */
+      border-radius: 15px;
+      /* Bordes redondeados */
+      padding: 1px;
+      /* Espaciado interno */
+      margin: 30px auto;
+      /* Espaciado externo y centrado */
+      max-width: 80%;
+      /* Ancho máximo del recuadro */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* Sombra para darle profundidad */
+      margin-top: 30px;
+      margin-bottom: 10;
+    }
+
+    .container-menu-general .menu-title {
+      text-align: center;
+      /* Centra el texto del título */
+      margin-bottom: 5px;
+      /* Espacio entre el título y las tarjetas */
+      font-size: 2rem;
+    }
+
+    /* Animación cuando se activa */
+    .menu-title.show {
+      transform: translateY(0);
+      /* Se mueve hacia su posición normal */
+      opacity: 1;
+      /* Se vuelve visible */
+    }
+
+    .card {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card-img-top {
+      height: 200px;
+      /* Ajusta la altura de la imagen */
+      object-fit: cover;
+    }
+
+
+    /*Poup*/
+    .btn-primary {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    /* Estilos del Modal */
+    .modal {
+      display: none;
+      /* Oculto por defecto */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Fondo oscuro */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeIn 0.3s ease-in-out;
+      /* Animación de apertura */
+    }
+
+    .modal-content {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 50%;
+      /* Reducido el tamaño del recuadro */
+      max-width: 600px;
+      text-align: center;
+      animation: modalOpen 0.5s ease;
+      /* Animación del contenido */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* Centrado de la imagen */
+    }
+
+    .modal-image {
+      width: 70%;
+      /* Reducido el tamaño de la imagen */
+      border-radius: 10px;
+      object-fit: contain;
+      /* Asegura que la imagen mantenga su proporción sin deformarse */
+      margin-bottom: 20px;
+      /* Espacio entre la imagen y la información */
+    }
+
+    .modal-info {
+      margin-top: 20px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .btn-danger {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .btn-danger:hover {
+      background-color: #c82333;
+    }
+
+    /* Efecto de opacidad y blur en el fondo */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Fondo semi-transparente */
+      backdrop-filter: blur(5px);
+      /* Efecto de blur */
+      z-index: 500;
+      animation: overlayFadeIn 0.3s ease-in-out;
+      /* Animación del fondo */
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes modalOpen {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes overlayFadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes modalClose {
+      from {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      to {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    /* Opcional: Estilo del overlay cuando el modal está visible */
+    .overlay.show {
+      display: block;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+
+    /* Animación de cierre */
+    .modal.hide {
+      animation: modalClose 0.5s ease-in-out;
+      display: flex;
+    }
+    /*Créditos*/
+.credits-container {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.credits-container p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.credits-container i {
+  color: white;
+  font-size: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .credits-container p {
+      font-size: 14px;
+  }
+
+  .credits-container i {
+      font-size: 18px;
+  }
+}

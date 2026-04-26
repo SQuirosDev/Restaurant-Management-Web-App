@@ -1,0 +1,241 @@
+body {
+    background: linear-gradient(to bottom right, #1e1e2f, #121214); /*Fondo con degradado lineal*/
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* oculta los ocntenidos que se desbordan horizontalmente de la pagina*/
+}
+
+/*Animacion SVG*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #12122a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /*Que elementos se superponen en la pagina*/
+    opacity: 1;
+    transition: opacity 1s ease; /*Animacion de transicion*/
+}
+
+.content {
+    text-align: center;
+}
+
+svg.tea {
+    --secondary: white;
+}
+
+svg.tea #teabag {
+    transform-origin: top center;
+    transform: rotate(3deg);
+    animation: swing 2s infinite;
+}
+
+svg.tea #steamL {
+    stroke-dasharray: 13;
+    stroke-dashoffset: 13;
+    animation: steamLarge 2s infinite;
+}
+
+svg.tea #steamR {
+    stroke-dasharray: 9;
+    stroke-dashoffset: 9;
+    animation: steamSmall 2s infinite;
+}
+
+/* Keyframes para animaciones */
+/*Como y cuando cambian de estilo*/
+@keyframes swing {
+    50% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes steamLarge {
+    0% {
+        stroke-dashoffset: 13;
+        opacity: 0.6;
+    }
+
+    100% {
+        stroke-dashoffset: 39;
+        opacity: 0;
+    }
+}
+
+@keyframes steamSmall {
+    10% {
+        stroke-dashoffset: 9;
+        opacity: 0.6;
+    }
+
+    80% {
+        stroke-dashoffset: 27;
+        opacity: 0;
+    }
+}
+
+/*NavBar*/
+.navbar-brand {
+    font-weight: 500;
+    color: #585858;
+    font-size: 27px;
+    transition: 0.3s color;
+}
+
+#btnAdmin {
+    display: none;
+}
+
+.navbar {
+    background-color: #fff;
+    height: 70px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.login-btn {
+    background-color: #333333;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-btn:hover {
+    background-color: #585858;
+}
+
+.register-btn {
+    background-color: #333333;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.register-btn:hover {
+    background-color: #585858;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #000;
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar.hidden {
+    transform: translateY(-150%);
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: #000;
+}
+
+@media(min-width: 991px) { /*configuracion para el ajustamiento de pantallas*/
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #D3D3D3;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+/*HeroSection*/
+.hero-section {
+    background: url(../img/fondoContactanos.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+}
+
+.hero-section::before {
+    background-color: rgba(0, 0, 0, 0.3);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-section .container {
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 1.5em;
+    padding-bottom: 220px;
+}
+
+.hero-section h2 {
+    font-size: 25px
+}
+
+/*Créditos*/
+.credits-container {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.credits-container p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.credits-container i {
+    color: white;
+    font-size: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .credits-container p {
+        font-size: 14px;
+    }
+
+    .credits-container i {
+        font-size: 18px;
+    }
+}
